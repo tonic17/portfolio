@@ -79,6 +79,37 @@ export const ScNavItem = styled.li`
     margin: 1rem;
 `;
 
+export const ScNavExternalLink = styled.a`
+    &:link,
+    &:visited {
+        display: inline-block;
+        font-size: 3rem;
+        font-weight: 300;
+        padding: 1rem 2rem;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        background-image: linear-gradient(120deg, transparent 50%, white 50%);
+        background-size: 220%;
+        transition: all 0.3s linear;
+
+        text-align: left;
+        opacity: 0;
+
+        span {
+            margin-right: 1.5rem;
+            display: inline-block;
+        }
+    }
+
+    &:hover,
+    &:active {
+        background-position: 100%;
+        color: rgb(0, 78, 146, 0.8);
+        transform: translateX(1rem);
+    }
+`;
+
 export const ScNavLink = styled(Link)`
     &:link,
     &:visited {
@@ -160,6 +191,9 @@ export const ScInput = styled.input`
     &:checked ~ ${ScNavTag} ${ScNavLink} {
         opacity: 1;
     }
+    &:checked ~ ${ScNavTag} ${ScNavExternalLink} {
+        opacity: 1;
+    }
 `;
 
 export class Navbar extends Component {
@@ -172,52 +206,40 @@ export class Navbar extends Component {
                         checked={this.props.navOpen}
                         onChange={this.props.handleNavBar}
                         type="checkbox"
-                        class="navigation__checkbox"
                         id="navi-toggle"
                     />
-                    <ScLabel for="navi-toggle" class="navigation__button">
+                    <ScLabel for="navi-toggle">
                         <ScSpanIcon class="navigation__icon">&nbsp;</ScSpanIcon>
                     </ScLabel>
                     <ScNavBackground class="navigation__background">
                         &nbsp;
                     </ScNavBackground>
 
-                    <ScNavTag class="navigation__nav">
-                        <ScUl class="navigation__list">
-                            <ScNavItem
-                                onClick={this.props.handleNavBar}
-                                class="navigation__item"
-                            >
-                                <ScNavLink to="/" class="navigation__link">
+                    <ScNavTag>
+                        <ScUl>
+                            <ScNavItem onClick={this.props.handleNavBar}>
+                                <ScNavLink to="/">
                                     <span>1</span> About
                                 </ScNavLink>
                             </ScNavItem>
-                            <ScNavItem
-                                onClick={this.props.handleNavBar}
-                                class="navigation__item"
-                            >
-                                <ScNavLink
-                                    to="/projects"
-                                    class="navigation__link"
-                                >
+                            <ScNavItem onClick={this.props.handleNavBar}>
+                                <ScNavLink to="/projects">
                                     <span>2</span>Projects
                                 </ScNavLink>
                             </ScNavItem>
-                            <ScNavItem
-                                onClick={this.props.handleNavBar}
-                                class="navigation__item"
-                            >
-                                <ScNavLink
-                                    to="/contact"
-                                    class="navigation__link"
-                                >
+                            <ScNavItem onClick={this.props.handleNavBar}>
+                                <ScNavLink to="/contact">
                                     <span>3</span>Contact
                                 </ScNavLink>
                             </ScNavItem>
-                            <ScNavItem class="navigation__item">
-                                <ScNavLink to="#" class="navigation__link">
+                            <ScNavItem>
+                                <ScNavExternalLink
+                                    href="/resume.pdf"
+                                    target="__blank"
+                                    autocomplete="off"
+                                >
                                     <span>4</span>Resume
-                                </ScNavLink>
+                                </ScNavExternalLink>
                             </ScNavItem>
                         </ScUl>
                     </ScNavTag>

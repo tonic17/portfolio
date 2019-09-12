@@ -131,7 +131,7 @@ const ScVideoTag = styled.video`
     object-fit: cover;
 `;
 
-export class ScContact extends Component {
+export class Contact extends Component {
     render() {
         return (
             <div>
@@ -144,7 +144,7 @@ export class ScContact extends Component {
                     </ScVideoTag>
                 </ScVideoContainer>
                 <ScSection class="section-book">
-                    <ScRow class="row">
+                    <ScRow justifyContent="center">
                         <ScBook class="book">
                             <ScFormWrapper class="book__form">
                                 <ScForm action="#" class="form">

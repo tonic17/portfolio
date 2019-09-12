@@ -30,7 +30,7 @@ export const ScH1 = styled.h1`
               `}
 `;
 
-export class ScIntroduction extends Component {
+export class Introduction extends Component {
     state = {
         loaded: false
     };

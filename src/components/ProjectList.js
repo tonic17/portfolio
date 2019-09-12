@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { Project } from "./Project";
 import { data } from "../data/data";
-import ScLogoSvg from "../components/elements/ScLogoSvg";
+import ScLogoSvg from "./elements/ScLogoSvg";
 
 const ScProjectContainer = styled.div`
     display: flex;
@@ -25,7 +25,7 @@ const ScH1 = styled.h1`
     padding: 50px;
 `;
 
-export class ScProjectList extends Component {
+export class ProjectList extends Component {
     render() {
         console.log(data);
         return (

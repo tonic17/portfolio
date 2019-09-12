@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { About, Navbar, ScProjectList, Video, ScContact } from "./components";
+import { About, Navbar, ProjectList, Video, Contact } from "./components";
 
 class App extends Component {
     state = {
@@ -33,14 +33,14 @@ class App extends Component {
                         exact
                         path="/projects"
                         render={() => {
-                            return <ScProjectList />;
+                            return <ProjectList />;
                         }}
                     />
                     <Route
                         exact
                         path="/contact"
                         render={() => {
-                            return <ScContact />;
+                            return <Contact />;
                         }}
                     />
                 </div>

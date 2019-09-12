@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import img from "../images/profile-1.jpg";
-import { ScIntroduction } from "./ScIntroduction";
+import { Introduction } from "./Introduction";
 import { ScHeader } from "../elements/ScHeader";
 import { ScImgBlur } from "../elements";
 
@@ -116,7 +116,7 @@ export class About extends Component {
                     </ScSvg>
                     <ScImgBlur src={img} text={"SAIDA DIPERI"} />
                     <h1>Saida DiPeri</h1>
-                    <ScIntroduction />
+                    <Introduction />
                 </ScHeader>
 
                 <div class="container">
