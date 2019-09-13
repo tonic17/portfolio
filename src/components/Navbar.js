@@ -166,7 +166,7 @@ export const ScInput = styled.input`
     display: none;
 
     &:checked ~ ${ScNavBackground} {
-        transform: scale(100);
+        transform: scale(200);
     }
 
     &:checked ~ ${ScNavTag} {

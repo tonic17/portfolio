@@ -18,8 +18,8 @@ const ScProjectListWrapper = styled.div`
 `;
 
 const ScH1 = styled.h1`
-    font-size: 4rem;
-    font-family: "Black Ops One", cursive;
+    font-size: 3rem;
+    font-family: "Raleway", sans-serif;
     color: white;
     text-align: center;
     padding: 50px;

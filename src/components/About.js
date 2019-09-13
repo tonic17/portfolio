@@ -4,6 +4,7 @@ import img from "../images/profile-1.jpg";
 import { Introduction } from "./Introduction";
 import { ScHeader } from "../elements/ScHeader";
 import { ScImgBlur } from "../elements";
+import Technologies from "../components/Technologies";
 
 export const ScSvg = styled.svg`
     position: absolute;
@@ -121,26 +122,9 @@ export class About extends Component {
 
                 <div class="container">
                     {/* <PaddedHrTag class="padded-hr" /> */}
-                    <ScH2 class="text-center">Skills</ScH2>
-                    <RowContainer class="row">
-                        <ColDiv class="col-md text-center">
-                            <h5 class="font-weight-bold">Technology</h5>
-                            <p>JavaScript</p>
-                            <p>HTML/CSS</p>
-                            <p>React/Redux</p>
-                            <p>MangoDB</p>
-                            <p>Socket.IO</p>
-                            <p>Express</p>
-                            <p>SQL</p>
-                            <p>Git</p>
-                        </ColDiv>
-                        <ColDiv class="col-md text-center">
-                            <h5 class="font-weight-bold">Other</h5>
-                            <p>Written & Oral Communication</p>
-                            <p>Cross-Functional Teams</p>
-                            <p>Critical Thinking</p>
-                        </ColDiv>
-                    </RowContainer>
+                    <ScH2 class="text-center">Technologies</ScH2>
+        
+                    <Technologies></Technologies>
                 </div>
             </div>
         );

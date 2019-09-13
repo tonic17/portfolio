@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 import img from "../images/galaxy-warriors.png";
 import galaxyWarriors from "../videos/galaxy-warriors.mp4";
-import link from "../images/link.svg";
+// import link from "../images/link.svg";
 
 const ScSection = styled.section`
     width: 33%;
@@ -215,7 +215,7 @@ export const Project = props => {
                         {props.video ? (
                             <ScVideo id="background-video" loop autoPlay>
                                 <source
-                                    src={require(`../images/${props.video}`)}
+                                    src={require(`../videos/${props.video}`)}
                                     type="video/mp4"
                                 />
                             </ScVideo>
