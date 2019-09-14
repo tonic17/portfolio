@@ -116,7 +116,6 @@ export class About extends Component {
                         </g>
                     </ScSvg>
                     <ScImgBlur src={img} text={"SAIDA DIPERI"} />
-                    <h1>Saida DiPeri</h1>
                     <Introduction />
                 </ScHeader>
 

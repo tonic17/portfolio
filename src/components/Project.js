@@ -1,9 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
-import img from "../images/galaxy-warriors.png";
-import galaxyWarriors from "../videos/galaxy-warriors.mp4";
-// import link from "../images/link.svg";
 
 const ScSection = styled.section`
     width: 33%;
@@ -213,17 +209,17 @@ export const Project = props => {
                 >
                     <ScCardCta class="card__cta">
                         {props.video ? (
-                            <ScVideo id="background-video" loop autoPlay>
+                            <ScVideo id="background-video" loop autoPlay muted>
                                 <source
                                     src={require(`../videos/${props.video}`)}
                                     type="video/mp4"
                                 />
                             </ScVideo>
                         ) : (
-                            <ScCardPicture image={props.image}>
-                                &nbsp;
+                                <ScCardPicture image={props.image}>
+                                    &nbsp;
                             </ScCardPicture>
-                        )}
+                            )}
 
                         <ScPtag>{props.description}</ScPtag>
                         <ScLink href={props.deployed} class="btn btn--white">
