@@ -4,6 +4,12 @@ import styled, { css } from "styled-components";
 const ScSection = styled.section`
     width: 33%;
     padding: 50px;
+    @media only screen and (max-width: 1200px) {
+        width:50%;
+    }
+    @media only screen and (max-width: 800px) {
+        width:100%;
+    }
 `;
 
 export const ScCardsideFront = styled.div`
