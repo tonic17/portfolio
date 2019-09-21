@@ -5,7 +5,7 @@ export const data = [
         id: "Galaxy Wariors",
         github_link: "https://github.com/sdiperi90/galaxy-warriors-project",
         deployed_link:
-            "https://pages.git.generalassemb.ly/sdiperi17/galaxy-warriors/index.html",
+            "https://sdiperi90.github.io/galaxy-warriors/",
         description:
             "Spaceship shooting Game. Protect Earth from Aliens. There will be a large number of enemies invading planet and player has to shoot and destroy them. Player can play with selected Spaceship. Built using Javascript, CSS and HTML allows users to play with spaceship of their choice from the menu.",
         technologies_used: ["Javascript", "HTML", "CSS", "external API"],
@@ -66,7 +66,7 @@ export const data = [
     },
     {
         id: "registry-app",
-        github_link: "https://git.generalassemb.ly/sdiperi17/registry-app",
+        github_link: "https://github.com/sdiperi90/registry_app",
         deployed_link: "",
         description:
             "With registry app users are able to create a registry for wedding or baby shower events and add a list of items they wish to receive as a gift, then share it to family and friends. When the item is selected by friends or family.",

@@ -3,7 +3,8 @@ import styled, { css } from "styled-components";
 import video from "../videos/contact.mp4";
 
 export const ScSection = styled.section`
-    padding: 7rem 0;
+    height: 100vh;
+
     background-image: linear-gradient(
         to right bottom,
         rgb(74, 0, 224, 0.8),
@@ -13,6 +14,8 @@ export const ScSection = styled.section`
 
 export const ScRow = styled.div`
     display: flex;
+    height: 100vh;
+    align-items: center;
     ${({ justifyContent }) => {
         return (
             justifyContent &&

@@ -7,8 +7,8 @@ export const ScPtag = styled.p`
     font-family: "Raleway", sans-serif;
 `;
 
-export const ScH1 = styled.h1`
-    width: 500px;
+const ScIntroParagraph = styled.p`
+    max-width:500px;
     font-size: 1rem;
     font-family: "Raleway", sans-serif;
     color: white;
@@ -16,7 +16,6 @@ export const ScH1 = styled.h1`
     margin: 0 auto;
     opacity: 0;
     margin-top: 50px;
-
     text-align: center;
     transition: all 0.3s linear;
     ${({ loaded }) =>
@@ -28,6 +27,7 @@ export const ScH1 = styled.h1`
             : css`
                   opacity: 0;
               `}
+
 `;
 
 export class Introduction extends Component {
@@ -46,7 +46,7 @@ export class Introduction extends Component {
     render() {
         return (
             <div style={{ paddingTop: "10%" }}>
-                <ScH1 loaded={this.state.loaded}>
+                <ScIntroParagraph loaded={this.state.loaded}>
                     Hello! I'am Saida DiPeri. I'm an ambitious, recourceful and
                     collaborative Full Stack Developer leveraging my four years
                     of experience in insurance industry to develop applications
@@ -56,8 +56,7 @@ export class Introduction extends Component {
                     problem can be solved by breaking down issues into smaller,
                     manageable components. I am always seeking out dynamic and
                     efficient ways to solve challenging problems.
-                </ScH1>
-                <p />
+                </ScIntroParagraph>
             </div>
         );
     }
