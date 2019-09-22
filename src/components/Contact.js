@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import styled, { css } from "styled-components";
 import video from "../videos/contact.mp4";
 
@@ -10,6 +10,31 @@ export const ScSection = styled.section`
         rgb(74, 0, 224, 0.8),
         rgb(142, 45, 226, 0.8)
     );
+`;
+
+export const ScContactDesktopSection = styled.div`
+    @media only screen and (max-width: 600px) {
+        & {
+            display : none;
+        }
+    }
+    
+`;
+
+export const ScContactMobileSection = styled.div`
+    height: 100vh;
+
+    background-image: linear-gradient(
+        to right bottom,
+        rgb(74, 0, 224, 0.8),
+        rgb(142, 45, 226, 0.8)
+    );
+    @media only screen and (min-width: 600px) {
+        & {
+            display : none;
+        }
+    }
+    
 `;
 
 export const ScRow = styled.div`
@@ -40,9 +65,18 @@ export const ScBook = styled.div`
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0.2);
 `;
 
-export const ScFormWrapper = styled.div`
+const ScFormWrapper = styled.div`
     width: 50%;
     padding: 6rem;
+    @media only screen and (max-width: 600px) {
+        & {
+           padding:0;
+           padding-top:150px;
+           margin: 0 auto;
+           width:80%;
+        }
+    }
+    
 `;
 
 export const ScForm = styled.form``;
@@ -51,7 +85,7 @@ export const ScHeaderContainer = styled.div`
     margin-bottom: 1.5rem !important;
 `;
 
-export const ScHeader = styled.h2`
+const ScHeader = styled.h2`
     font-size: 3.5rem;
     text-transform: uppercase;
     font-weight: 700;
@@ -65,6 +99,11 @@ export const ScHeader = styled.h2`
 
     &:hover {
         text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+    }
+    @media only screen and (max-width: 600px) {
+        & {
+            background-image:none
+        }
     }
 `;
 
@@ -138,80 +177,135 @@ export class Contact extends Component {
     render() {
         return (
             <div>
-                <ScVideoContainer class="bg-video">
-                    <ScVideoTag class="bg-video__content" autoPlay muted loop>
-                        <source
-                            src={require("../videos/Hey-World.mp4")}
-                            type="video/mp4"
-                        />
-                    </ScVideoTag>
-                </ScVideoContainer>
-                <ScSection class="section-book">
-                    <ScRow justifyContent="center">
-                        <ScBook class="book">
-                            <ScFormWrapper class="book__form">
-                                <ScForm action="#" class="form">
-                                    <ScHeaderContainer class="u-margin-bottom-medium">
-                                        <ScHeader class="heading-secondary">
-                                            Contact
+                <ScContactDesktopSection>
+                    <Fragment>
+                        <ScVideoContainer class="bg-video">
+                            <ScVideoTag class="bg-video__content" autoPlay muted loop>
+                                <source
+                                    src={require("../videos/Hey-World.mp4")}
+                                    type="video/mp4"
+                                />
+                            </ScVideoTag>
+                        </ScVideoContainer>
+                        <ScSection class="section-book">
+                            <ScRow justifyContent="center">
+                                <ScBook class="book">
+                                    <ScFormWrapper class="book__form">
+                                        <ScForm action="#" class="form">
+                                            <ScHeaderContainer class="u-margin-bottom-medium">
+                                                <ScHeader class="heading-secondary">
+                                                    Contact
                                         </ScHeader>
-                                    </ScHeaderContainer>
+                                            </ScHeaderContainer>
 
-                                    <ScFormGroup class="form__group">
-                                        <ScFormInput
-                                            type="text"
-                                            class="form__input"
-                                            placeholder="Full name"
-                                            id="name"
-                                            required
-                                        />
-                                        {/* <label for="name" class="form__label">
+                                            <ScFormGroup class="form__group">
+                                                <ScFormInput
+                                                    type="text"
+                                                    class="form__input"
+                                                    placeholder="Full name"
+                                                    id="name"
+                                                    required
+                                                />
+                                                {/* <label for="name" class="form__label">
                                             Full name
                                         </label> */}
-                                    </ScFormGroup>
+                                            </ScFormGroup>
 
-                                    <ScFormGroup class="form__group">
-                                        <ScFormInput
-                                            type="email"
-                                            class="form__input"
-                                            placeholder="Email address"
-                                            id="email"
-                                            required
-                                        />
-                                        {/* <label for="email" class="form__label">
+                                            <ScFormGroup class="form__group">
+                                                <ScFormInput
+                                                    type="email"
+                                                    class="form__input"
+                                                    placeholder="Email address"
+                                                    id="email"
+                                                    required
+                                                />
+                                                {/* <label for="email" class="form__label">
                                             Email address
                                         </label> */}
-                                    </ScFormGroup>
+                                            </ScFormGroup>
 
-                                    <ScFormGroup class="form__group">
-                                        <ScFormInput
-                                            type="text"
-                                            class="form__input"
-                                            placeholder="Message"
-                                            id="email"
-                                            required
-                                        />
-                                        {/* <label for="text" class="form__label">
+                                            <ScFormGroup class="form__group">
+                                                <ScFormInput
+                                                    type="text"
+                                                    class="form__input"
+                                                    placeholder="Message"
+                                                    id="email"
+                                                    required
+                                                />
+                                                {/* <label for="text" class="form__label">
                                             Message
                                         </label> */}
-                                    </ScFormGroup>
+                                            </ScFormGroup>
 
-                                    <ScFormGroup class="form__group">
-                                        <button class="btn btn--green">
-                                            Submit &rarr;
+                                            <ScFormGroup class="form__group">
+                                                <button class="btn btn--green">
+                                                    Submit &rarr;
                                         </button>
-                                    </ScFormGroup>
-                                </ScForm>
-                            </ScFormWrapper>
-                        </ScBook>
-                    </ScRow>
-                </ScSection>
-                {/* <div class="bg-video">
-                    <video class="bg-video__content" autoplay muted loop>
-                        <source src="img/video.mp4" type="video/mp4" />
-                        <source src="img/video.webm" type="video/webm" />
-                    </video>
-                </div> */}
+                                            </ScFormGroup>
+                                        </ScForm>
+                                    </ScFormWrapper>
+                                </ScBook>
+                            </ScRow>
+                        </ScSection>
+                    </Fragment>
+                </ScContactDesktopSection>
+                {/* mobile form */}
+                <ScContactMobileSection>
+                    <ScFormWrapper class="book__form">
+                        <ScForm action="#" class="form">
+                            <ScHeaderContainer class="u-margin-bottom-medium">
+                                <ScHeader class="heading-secondary">
+                                    Contact
+                                        </ScHeader>
+                            </ScHeaderContainer>
+
+                            <ScFormGroup class="form__group">
+                                <ScFormInput
+                                    type="text"
+                                    class="form__input"
+                                    placeholder="Full name"
+                                    id="name"
+                                    required
+                                />
+                                {/* <label for="name" class="form__label">
+                                            Full name
+                                        </label> */}
+                            </ScFormGroup>
+
+                            <ScFormGroup class="form__group">
+                                <ScFormInput
+                                    type="email"
+                                    class="form__input"
+                                    placeholder="Email address"
+                                    id="email"
+                                    required
+                                />
+                                {/* <label for="email" class="form__label">
+                                            Email address
+                                        </label> */}
+                            </ScFormGroup>
+
+                            <ScFormGroup class="form__group">
+                                <ScFormInput
+                                    type="text"
+                                    class="form__input"
+                                    placeholder="Message"
+                                    id="email"
+                                    required
+                                />
+                                {/* <label for="text" class="form__label">
+                                            Message
+                                        </label> */}
+                            </ScFormGroup>
+
+                            <ScFormGroup class="form__group">
+                                <button class="btn btn--green">
+                                    Submit &rarr;
+                                        </button>
+                            </ScFormGroup>
+                        </ScForm>
+                    </ScFormWrapper>
+                </ScContactMobileSection>
             </div>
         );
     }
