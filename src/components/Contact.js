@@ -102,6 +102,7 @@ const ScHeader = styled.h2`
     }
     @media only screen and (max-width: 600px) {
         & {
+            font-size: 3rem;
             background-image:none
         }
     }
@@ -191,7 +192,7 @@ export class Contact extends Component {
                             <ScRow justifyContent="center">
                                 <ScBook class="book">
                                     <ScFormWrapper class="book__form">
-                                        <ScForm action="#" class="form">
+                                        <ScForm method='POST' name='contact' data-netlify="true">
                                             <ScHeaderContainer class="u-margin-bottom-medium">
                                                 <ScHeader class="heading-secondary">
                                                     Contact
@@ -252,7 +253,7 @@ export class Contact extends Component {
                 {/* mobile form */}
                 <ScContactMobileSection>
                     <ScFormWrapper class="book__form">
-                        <ScForm action="#" class="form">
+                        <ScForm method='POST' name='contact' data-netlify="true">
                             <ScHeaderContainer class="u-margin-bottom-medium">
                                 <ScHeader class="heading-secondary">
                                     Contact
