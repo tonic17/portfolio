@@ -192,7 +192,8 @@ export class Contact extends Component {
                             <ScRow justifyContent="center">
                                 <ScBook class="book">
                                     <ScFormWrapper class="book__form">
-                                        <ScForm name='contact' netlify>
+                                        <ScForm name='form-name' method="POST" netlify>
+                                            <input type="hidden" name="form-name" value="contact" />
                                             <ScHeaderContainer class="u-margin-bottom-medium">
                                                 <ScHeader class="heading-secondary">
                                                     Contact
@@ -256,7 +257,8 @@ export class Contact extends Component {
                 {/* mobile form */}
                 <ScContactMobileSection>
                     <ScFormWrapper class="book__form">
-                        <ScForm name='contact' netlify>
+                        <ScForm name='form-name' method="POST" netlify>
+                            <input type="hidden" name="form-name" value="contact" />
                             <ScHeaderContainer class="u-margin-bottom-medium">
                                 <ScHeader class="heading-secondary">
                                     Contact
