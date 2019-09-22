@@ -123,7 +123,7 @@ export const ScFormInput = styled.input`
     font-size: 15px;
 
     font-family: inherit;
-    color: inherit;
+    color: black !important;
     padding: 15px 20px;
     border-radius: 2px;
     background-color: rgba(250, 250, 250, 0.5);
@@ -205,6 +205,7 @@ export class Contact extends Component {
                                                     class="form__input"
                                                     placeholder="Full name"
                                                     id="name"
+                                                    name="name"
                                                     required
                                                 />
                                                 {/* <label for="name" class="form__label">
@@ -215,6 +216,7 @@ export class Contact extends Component {
                                             <ScFormGroup class="form__group">
                                                 <ScFormInput
                                                     type="email"
+                                                    name="email"
                                                     class="form__input"
                                                     placeholder="Email address"
                                                     id="email"
@@ -228,9 +230,10 @@ export class Contact extends Component {
                                             <ScFormGroup class="form__group">
                                                 <ScFormInput
                                                     type="text"
+                                                    name="message"
                                                     class="form__input"
                                                     placeholder="Message"
-                                                    id="email"
+                                                    id="message"
                                                     required
                                                 />
                                                 {/* <label for="text" class="form__label">
@@ -239,7 +242,7 @@ export class Contact extends Component {
                                             </ScFormGroup>
 
                                             <ScFormGroup class="form__group">
-                                                <button class="btn btn--green">
+                                                <button class="btn btn--green" type="submit">
                                                     Submit &rarr;
                                         </button>
                                             </ScFormGroup>
@@ -266,6 +269,7 @@ export class Contact extends Component {
                                     class="form__input"
                                     placeholder="Full name"
                                     id="name"
+                                    name="name"
                                     required
                                 />
                                 {/* <label for="name" class="form__label">
@@ -276,6 +280,7 @@ export class Contact extends Component {
                             <ScFormGroup class="form__group">
                                 <ScFormInput
                                     type="email"
+                                    name="email"
                                     class="form__input"
                                     placeholder="Email address"
                                     id="email"
@@ -289,9 +294,10 @@ export class Contact extends Component {
                             <ScFormGroup class="form__group">
                                 <ScFormInput
                                     type="text"
+                                    name="message"
                                     class="form__input"
                                     placeholder="Message"
-                                    id="email"
+                                    id="message"
                                     required
                                 />
                                 {/* <label for="text" class="form__label">
@@ -300,7 +306,7 @@ export class Contact extends Component {
                             </ScFormGroup>
 
                             <ScFormGroup class="form__group">
-                                <button class="btn btn--green">
+                                <button class="btn btn--green" type="submit">
                                     Submit &rarr;
                                         </button>
                             </ScFormGroup>
