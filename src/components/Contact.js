@@ -23,7 +23,8 @@ export const ScContactDesktopSection = styled.div`
 
 export const ScContactMobileSection = styled.div`
     height: 100vh;
-
+    position: relative;
+    z-index: 9999;
     background-image: linear-gradient(
         to right bottom,
         rgb(74, 0, 224, 0.8),
