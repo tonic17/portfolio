@@ -23,8 +23,7 @@ export const ScContactDesktopSection = styled.div`
 
 export const ScContactMobileSection = styled.div`
     height: 100vh;
-    position: relative;
-    z-index: 9999;
+
     background-image: linear-gradient(
         to right bottom,
         rgb(74, 0, 224, 0.8),
@@ -80,7 +79,10 @@ const ScFormWrapper = styled.div`
     
 `;
 
-export const ScForm = styled.form``;
+export const ScForm = styled.form`
+    position: relative;
+    ${({ navOpen, mobile }) => !navOpen && mobile && css`z-index: 9999;`}
+`;
 
 export const ScHeaderContainer = styled.div`
     margin-bottom: 1.5rem !important;
@@ -258,7 +260,7 @@ export class Contact extends Component {
                 {/* mobile form */}
                 <ScContactMobileSection>
                     <ScFormWrapper class="book__form">
-                        <ScForm name='contact' method="POST">
+                        <ScForm name='contact' method="POST" navOpen={this.props.navOpen} mobile>
                             <input type="hidden" name="form-name" value="contact" />
                             <ScHeaderContainer class="u-margin-bottom-medium">
                                 <ScHeader class="heading-secondary">

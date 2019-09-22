@@ -40,7 +40,7 @@ class App extends Component {
                         exact
                         path="/contact"
                         render={() => {
-                            return <Contact />;
+                            return <Contact navOpen={this.state.navOpen} />;
                         }}
                     />
                 </div>
