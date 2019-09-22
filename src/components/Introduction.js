@@ -29,6 +29,14 @@ const ScIntroParagraph = styled.p`
               `}
 
 `;
+const ScParagraphWrapper = styled.div`
+    padding-top: 10%;
+    @media only screen and (max-width: 600px) {
+        & {
+            padding-top: 20%;
+        }
+    }
+`
 
 export class Introduction extends Component {
     state = {
@@ -45,7 +53,7 @@ export class Introduction extends Component {
 
     render() {
         return (
-            <div style={{ paddingTop: "10%" }}>
+            <ScParagraphWrapper>
                 <ScIntroParagraph loaded={this.state.loaded}>
                     Hello! I'am Saida DiPeri. I'm an ambitious, recourceful and
                     collaborative Full Stack Developer leveraging my four years
@@ -57,7 +65,7 @@ export class Introduction extends Component {
                     manageable components. I am always seeking out dynamic and
                     efficient ways to solve challenging problems.
                 </ScIntroParagraph>
-            </div>
+            </ScParagraphWrapper>
         );
     }
 }

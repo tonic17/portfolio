@@ -102,11 +102,19 @@ export const ScNavExternalLink = styled.a`
         }
     }
 
+
     &:hover,
     &:active {
         background-position: 100%;
         color: rgb(0, 78, 146, 0.8);
         transform: translateX(1rem);
+    }    
+    @media only screen and (max-width: 600px) {
+        &:link,
+        &:visited {
+            font-size: 2rem;
+
+        }
     }
 `;
 
@@ -138,6 +146,14 @@ export const ScNavLink = styled(Link)`
         background-position: 100%;
         color: rgb(0, 78, 146, 0.8);
         transform: translateX(1rem);
+    }
+
+    @media only screen and (max-width: 600px) {
+        &:link,
+        &:visited {
+            font-size: 2rem;
+
+        }
     }
 `;
 

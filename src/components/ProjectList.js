@@ -23,6 +23,12 @@ const ScH1 = styled.h1`
     color: white;
     text-align: center;
     padding: 50px;
+    @media only screen and (max-width: 600px) {
+        & {
+            padding-top:100px;
+            font-size: 2rem;
+        }
+    }
 `;
 
 export class ProjectList extends Component {
