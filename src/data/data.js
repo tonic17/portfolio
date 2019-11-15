@@ -23,7 +23,7 @@ export const data = [
             "Zodiac app gives a glimpse of a person's basic characteristics, preferences, flaws and fears based on zodiac sign. It allows user to enter date of birth and get his/her zodiac",
         technologies_used: [
             "React",
-            "Javascript",
+            "JavaScript",
             "HTML",
             "CSS",
             "SASS",
@@ -47,7 +47,7 @@ export const data = [
             "Music lovers are able to create a video playlist of songs. Users are able to create account, or login. Users are then able to search database based on several search criteria options, and either play video from search results, or add video to their playlist of choice.",
         technologies_used: [
             "React",
-            "Javascript",
+            "JavaScript",
             "Express",
             "Sequelize",
             "HTML",
@@ -72,7 +72,7 @@ export const data = [
             "With registry app users are able to create a registry for wedding or baby shower events and add a list of items they wish to receive as a gift, then share it to family and friends. When the item is selected by friends or family.",
         technologies_used: [
             "React",
-            "Javascript",
+            "JavaScript",
             "Express",
             "Sequelize",
             "HTML",
@@ -98,7 +98,7 @@ export const data = [
             "This project is a redesign of the website for New York City restaurant Ladybird.",
         technologies_used: [
             "React",
-            "Javascript",
+            "JavaScript",
             "Express",
             "Sequelize",
             "HTML",
