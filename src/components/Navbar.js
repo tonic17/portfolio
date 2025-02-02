@@ -250,7 +250,7 @@ export class Navbar extends Component {
                             </ScNavItem>
                             <ScNavItem>
                                 <ScNavExternalLink
-                                    href="/resume.pdf"
+                                    href="/"
                                     target="__blank"
                                     autocomplete="off"
                                 >
